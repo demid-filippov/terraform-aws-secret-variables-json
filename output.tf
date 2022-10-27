@@ -12,3 +12,8 @@ output "json" {
     ]
   )
 }
+
+output "kms_key_id" {
+  description = "KMS Key ID for the SSM Parameter Store."
+  value       = aws_kms_key.encryption_key.key_id
+}
